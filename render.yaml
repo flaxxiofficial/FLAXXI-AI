@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: flaxxi-ai
+    runtime: docker
+
+    plan: starter
+
+    dockerfilePath: ./Dockerfile
+
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+
+      - key: DATA_DIR
+        value: /var/data
+
+      - key: DATABASE_PATH
+        value: /var/data/flaxxi.db
+
+      - key: OLLAMA_URL
+        sync: false
+
+      - key: AI_MODEL
+        value: qwen2.5:3b
+
+    disk:
+      name: flaxxi-storage
+      mountPath: /var/data
+      sizeGB: 10
