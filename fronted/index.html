@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>FLAXXI AI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="authScreen">
+
+    <div class="auth-box">
+
+        <h1>✦ FLAXXI AI</h1>
+
+        <p>Your AI. Your Intelligence.</p>
+
+        <input id="email" type="email"
+        placeholder="Email address">
+
+        <input id="password" type="password"
+        placeholder="Password">
+
+        <button onclick="login()">LOGIN</button>
+
+        <button onclick="register()">CREATE ACCOUNT</button>
+
+        <p id="authStatus"></p>
+
+    </div>
+
+</div>
+
+
+<div id="dashboard" class="hidden">
+
+    <aside>
+
+        <h2>FLAXXI AI</h2>
+
+        <button onclick="showPage('chat')">💬 AI Chat</button>
+
+        <button onclick="showPage('code')">💻 Code Generator</button>
+
+        <button onclick="showPage('image')">🎨 Image Studio</button>
+
+        <button onclick="showPage('apk')">📦 APK Analyzer</button>
+
+        <button onclick="showPage('dex')">⚙️ DEX Analyzer</button>
+
+        <button onclick="showPage('history')">🧠 Memory</button>
+
+        <button onclick="logout()">Logout</button>
+
+        <p class="online">● SYSTEM ONLINE</p>
+
+    </aside>
+
+
+    <main>
+
+        <header>
+            <h3 id="title">FLAXXI AI</h3>
+        </header>
+
+        <section id="workspace">
+
+            <div class="welcome">
+
+                <h1>Welcome to FLAXXI AI</h1>
+
+                <p>Your Personal AI Assistant</p>
+
+                <div class="grid">
+
+                    <button onclick="showPage('chat')">
+                        AI CHAT
+                    </button>
+
+                    <button onclick="showPage('code')">
+                        CODE GENERATOR
+                    </button>
+
+                    <button onclick="showPage('image')">
+                        IMAGE STUDIO
+                    </button>
+
+                    <button onclick="showPage('apk')">
+                        APK ANALYZER
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
